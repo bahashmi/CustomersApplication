@@ -47,8 +47,15 @@ angular.module('customersApp')
     $scope.appSettings = appSettings;
         
         function init() {
-           $scope.customers = customersFactory.getCustomers(); 
-        }
+        //    $scope.customers = customersFactory.getCustomers(); 
+        customersFactory.getCustomers().success(function(customers){
+            $scope.customers = customers;
+
+        })
+        .error(function(data, status, headers, config) {
+            // handle error
+        });
+    }
         
         init();
         
