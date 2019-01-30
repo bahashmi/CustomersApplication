@@ -12,7 +12,7 @@
 
         })
         .error(function(data, status, headers, config) {
-            // handle error
+            // handle error and kd
         });
         }
 
@@ -27,4 +27,3 @@
 
 }());
 
-//lecture 51, minute 2.04

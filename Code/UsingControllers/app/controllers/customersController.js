@@ -39,7 +39,7 @@ angular.module('customersApp')
 (function ()  {
     
 
-    var CustomersController =function($scope,customersFactory,appSettings) {
+    var CustomersController =function($scope,$log, customersFactory,appSettings) {
 
     $scope.sortBy = 'name';
     $scope.reverse = 'false';
@@ -51,9 +51,10 @@ angular.module('customersApp')
         customersFactory.getCustomers().success(function(customers){
             $scope.customers = customers;
 
-        })
+        }) 
         .error(function(data, status, headers, config) {
-            // handle error
+            // handle error and others
+           // $log.log(data.error +' '+ status);
         });
     }
         
@@ -64,7 +65,7 @@ angular.module('customersApp')
                 $scope.reverse=!$scope.reverse;
     };
     };
-    CustomersController.$inject = ['$scope','customersFactory', 'appSettings'];
+    CustomersController.$inject = ['$scope','$log','customersFactory', 'appSettings'];
     
     angular.module('customersApp')
     .controller('CustomersController', CustomersController);
