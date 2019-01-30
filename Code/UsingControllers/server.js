@@ -40,6 +40,7 @@ app.get('/orders', function(req, res) {
 
 app.delete('/customers/:id', function(req, res) {
     var customerId = parseInt(req.params.id);
+    console.log("hetfe")
     var data = { status: true };
     for (var i=0,len=customers.length;i<len;i++) {
         if (customers[i].id === customerId) {

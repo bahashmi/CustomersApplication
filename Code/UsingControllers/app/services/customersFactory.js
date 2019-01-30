@@ -104,7 +104,7 @@
             return $http.get('/orders');
         }
 
-        factory.deleteCustomers = function(customerId){
+        factory.deleteCustomer = function(customerId){
             return $http.delete('/customers/' + customerId);
         }
         
