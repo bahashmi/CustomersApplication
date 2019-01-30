@@ -7,3 +7,21 @@ th {
     background-color: #efefef;
     cursor: pointer;
 }
+
+.delete {
+    color: red; 
+    cursor: pointer;
+}
+
+tr.footer {
+    background-color: #efefef;
+}
+
+main {
+    margin-left: 12px;
+    margin-right:25px;
+}
+
+.center {
+    text-align: center;   
+}
